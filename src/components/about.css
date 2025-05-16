@@ -1,0 +1,41 @@
+/* CSS for Card Flip Animation */
+.skill-card {
+    perspective: 1000px;
+  }
+  
+  .card-front,
+  .card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .card-front:hover {
+    transform: rotateY(180deg);
+  }
+  
+  .card-back:hover {
+    transform: rotateY(0deg);
+  }
+  
